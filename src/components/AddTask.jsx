@@ -17,7 +17,7 @@ const AddTask = () => {
 
   return (
     <div >
-      <h1>To Do App</h1>
+     
       <input
         type="text"
         value={newTask}

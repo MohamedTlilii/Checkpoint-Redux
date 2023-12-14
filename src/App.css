@@ -1,12 +1,11 @@
 body {
-  font-family: "Arial", sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: red !important;
 }
 
 .container {
@@ -18,18 +17,20 @@ body {
 }
 
 input[type="text"] {
-  width: 80%;
+  width: calc(100% - 20px);
   padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc; /* Gray border */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
+  width: 95%;
   padding: 10px;
   cursor: pointer;
-  background-color: #4caf50; /* Green button */
-  color: #fff; /* White text */
+  background-color: #2ecc71;
+  color: #fff;
   border: none;
   border-radius: 4px;
 }
@@ -46,41 +47,28 @@ button {
 
 .filter-buttons {
   margin-top: 20px;
+  width: 98%;
 }
 
 .filter-buttons button {
   margin-right: 10px;
   padding: 8px;
-  background-color: #3498db; /* Blue button */
-  color: #fff; /* White text */
-  border: none;
-  border-radius: 4px;
-}
-
-/* Additional styling for task items */
-.task-item {
-  background-color: #ecf0f1; /* Light blue background */
-  padding: 12px;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task-item.completed {
-  background-color: #d4edda; /* Light green background for completed tasks */
-}
-
-.task-item input {
-  margin-right: 10px;
-}
-
-.task-item button {
-  padding: 8px;
-  background-color: #e74c3c; /* Red button for delete */
+  background-color: #3498db;
   color: #fff;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter-buttons button {
+  margin-right: 10px;
+  padding: 8px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
 }
