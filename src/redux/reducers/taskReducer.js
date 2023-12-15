@@ -24,6 +24,24 @@ const taskReducer = (state = initialState, action) => {
         ...state,
         filter: action.payload,
       };
+
+
+      case "DELETE_TASK":
+        return {
+          ...state,
+          tasks: state.tasks.filter((task) => task.id !== action.payload),
+        };
+        case "EDIT_TASK":
+          return {
+            ...state,
+            tasks: state.tasks.map((task) =>
+              task.id === action.payload.taskId
+                ? { ...task, description: action.payload.newDescription }
+                : task
+            ),
+          };
+
+
     default:
       return state;
   }
